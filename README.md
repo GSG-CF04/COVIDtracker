@@ -12,6 +12,7 @@
 ### **About COVIDtracker** <span id='about'></span>
 
 COVIDtracker is an application made to inform you about the number of people infected by Covid-19 virus in your country and fully aware users of all cases.
+
 ![](https://i.imgur.com/HRS8B2H.jpg)
 
 
