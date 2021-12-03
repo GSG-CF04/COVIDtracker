@@ -22,7 +22,7 @@ justify-content:flex-end;
 /* END ADD HEADER IMAGES STYLE */
 /* START ADD HEADER LOCATION STYLE */
 .header-locatin{
-margin:-37px auto 0px 25px;
+margin:-25px auto 0px 25px;
 display: flex;
 align-content:space-between;
 }
@@ -31,11 +31,17 @@ width: 15px;
 height: 25px;
 padding-top: 3px;
 }
-.country{
-font-style:normal;
-font-size: 30px;
-font-family:"Roboto";
-padding-left: 5px;
+#countries{
+    border-radius: 7px;
+    border-color: #FF8A23;
+    padding-left: 7px;
+    margin-left: 5px;
+    margin-bottom: 10px;
+    font-size: 16px;
+    width:200px;
+    color: rgb(61, 2, 2);
+    font-weight: bold;
+    font-family: "Rubik";
 }
 /* END ADD HEADER LOCATION STYLE */
 /* START ADD TOTAL CASES TEXT STYLE */
