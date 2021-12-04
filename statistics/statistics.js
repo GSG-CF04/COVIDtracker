@@ -5,13 +5,17 @@ const api2 ="https://api.covid19api.com/countries"; // API countries
 const countries= document.querySelector("#countries"); //The input of data list
 /* Get data from API */
 async function getData(){
-var data, data2;
+let data, data2;
     try{ const response = await fetch(api);// Get data from API location
-        const response2 = await fetch(api2); // Get data from API country   
         data = await response.json();
+    }catch (error) {
+    data = { country_name:"Palestinian Territory"}//handels an error and fixes the data to Palestine
+    }
+    try {
+        const response2 = await fetch(api2); // Get data from API country   
         data2 = await response2.json(); 
         printData(data,data2);  // Call printData function
-    }catch (error) {
+    } catch (error) {
         alert("ERROR: NO DATA")
         console.warn("Stupid network Error");
     }
