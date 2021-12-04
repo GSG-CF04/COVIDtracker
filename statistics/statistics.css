@@ -3,8 +3,28 @@ margin: 0;
 padding: 0;
 box-sizing: border-box;
 }
+/*START DARK THEME SECTION */
+:root {
+    --bg-c: #fffAF4;
+    --total-cases-text:#FF8A23;
+    --note-p:rgba(0, 0, 0, 0.6);
+    --bg-cont-card:#FFF1E1;
+    --t-btn:#FF8A23;
+}
+.dark {
+    --bg-c: #3d5a80;
+    --total-cases-text:#e0fbfc;
+    --note-p:#e0fbfc;
+    --bg-cont-card:#e0fbfc;
+    --t-btn:#ffdeeb;
+}
+.toggle-btn{
+    padding-left:10%;
+    color: var(--t-btn);
+}
+/*END DARK THEME SECTION */
 body {
-background: #fffAF4;
+background: var(--bg-c); /* FOR DARK THEME */
 font-family: "Roboto", Helvetica, sans-serif;
 max-width:100vw;
 }
@@ -47,7 +67,7 @@ padding-top: 3px;
 /* START ADD TOTAL CASES TEXT STYLE */
 .total-cases-text{
 font-size: 15px;
-color: #FF8A23;
+color: var(--total-cases-text);/* FOR DARK THEME */
 padding-left: 45px;
 }
 /* END ADD TOTAL CASES TEXT STYLE */
@@ -60,7 +80,7 @@ display: flex;
 padding-right: 20px;
 padding-left: 10px;
 width: 120px;
-color: rgba(0, 0, 0, 0.6);
+color: var(--note-p);/* FOR DARK THEME */
 font-family: "Rubik";
 font-style: normal;
 font-weight:bold;
@@ -96,7 +116,7 @@ flex-direction: row;
 flex-wrap: wrap;
 padding-top: 30px;
 margin-top: 30px;
-background: #FFF1E1;
+background: var(--bg-cont-card);
 border-radius: 29px;
 height: 365px;
 }
