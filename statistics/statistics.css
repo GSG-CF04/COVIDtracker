@@ -137,3 +137,38 @@ font-weight: 500;
 font-size: 14px;
 }
 /* END CONTENT STYLE */
+@media (min-width: 550px) and (max-width: 1023px) {
+#countries{
+font-size: 20px;
+width:250px;
+}
+.digram-img{
+margin-left: 25px;
+width: 90%;
+}
+.toggle-btn{
+padding-left:35%;   
+} 
+}
+@media  (min-width: 1024px){
+/* and (min-width: 1023px){ */
+#countries{
+font-size: 25px;
+width:300px;
+} 
+.digram-img{
+margin-left: 25px;
+width: 90%;
+}
+.content{
+display: flex;       
+}
+.card-content{
+margin-top: 0px;
+max-width: 50%;
+float: right;
+}
+.toggle-btn{
+padding-left:50%;
+}
+}
