@@ -119,6 +119,7 @@ body {
   display: flex;
   align-items: center;
   width: 100%;
+  overflow:auto; scroll-snap-type: x mandatory;
 }
 .page {
   min-width: 100%; /* needed so Firefox doesn't make img shrink to fit */
