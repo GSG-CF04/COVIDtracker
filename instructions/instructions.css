@@ -5,13 +5,21 @@ html {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+ 
 }
 body {
-  background: #fffaf4;
+  background: var(--primary-color); /* FOR DARK THEME */
   font-family: IBM Plex Sans;
   background-repeat: no-repeat;
   background-size: cover;
 }
+
+#icon{
+  width: 30px;
+  cursor: pointer;
+
+}
+
 
 .title {
   font-size: 23px;
@@ -22,7 +30,7 @@ body {
   font-style: normal;
   line-height: 24px;
   text-align: center;
-  color: #000000;
+  color: var(--secondory-color);
   font-weight: bold;
   margin-top: -7px;
 }
@@ -62,7 +70,7 @@ body {
   font-size: 22px;
   line-height: 26px;
   text-align: center;
-  color: #10242c;
+  color: var(--secondory-color);
   font-weight: bold;
 }
 
@@ -73,7 +81,7 @@ body {
   font-size: 18px;
   line-height: 21px;
   text-align: center;
-  color: #707a7c;
+  color: var(--secondory-color);
   padding-left: 25px;
   padding-right: 25px;
   margin: 20px;
@@ -100,8 +108,9 @@ body {
   text-align: center;
   border: none;
   color: #000000;
-  background-color: #fffaf4;
+  background: transparent;
   cursor: pointer;
+  color: var(--secondory-color); /* FOR DARK THEME */
 }
 
 /**/
@@ -125,3 +134,18 @@ body {
   min-width: 100%; /* needed so Firefox doesn't make img shrink to fit */
   width: 100%; /* can't take this out either as it breaks Chrome */
 }
+
+
+/*START DARK THEME SECTION */
+:root {
+--primary-color:#fffAF4;
+--secondory-color: #000000 ;
+}
+* .dark-theme {
+  --primary-color:#3d5a80;
+--secondory-color: #fffAF4 ;
+} 
+/*END DARK THEME SECTION */
+
+
+

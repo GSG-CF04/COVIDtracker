@@ -1,2 +1,14 @@
-var mySwipe = Swipe(document.getElementById('slider'));
-        mySwipe.setup();
+//! DARK AND LIGHT THEME TOGGLE
+
+let icon = document.getElementById("icon")
+icon.onclick = function(){
+        document.body.classList.toggle("dark-theme")
+        if(document.body.classList.contains("dark-theme")){
+                icon.src="../images/moon.png";}
+
+                else{
+                        icon.src="../images/moon.png";
+                } 
+        }
+
+
