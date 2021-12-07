@@ -1,8 +1,12 @@
 /* Definition of API */
 const api ="https://api.ipgeolocation.io/ipgeo?apiKey=cf2be30a619a447897245a7857d48018"; // API location
-const api2 ="https://api.covid19api.com/countries"; // API countries
+const api2 ="https://api.covid19api.com/countries"; 
+const api3 = "https://corona.dnsforfamily.com/graph.png?c=";   // API countries
 /* Definition of DOM TREE */ 
-const countries= document.querySelector("#countries"); //The input of data list
+const countries= document.querySelector("#countries");
+const digram = document.querySelector("#digram");
+const graph = document.getElementById("graph");
+const country = document.getElementById("country") //The input of data list
 /* Get data from API */
 async function getData(){
 let data, data2;
