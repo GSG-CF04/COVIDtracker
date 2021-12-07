@@ -1,50 +1,58 @@
 html {
-  scroll-snap-type: x mandatory; /* to swipe between pages*/
+  scroll-snap-type: x mandatory;
+  /* to swipe between pages*/
 }
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
- 
 }
+
 body {
-  background: var(--primary-color); /* FOR DARK THEME */
+  background: var(--primary-color);
+  /* FOR DARK THEME */
   font-family: IBM Plex Sans;
   background-repeat: no-repeat;
   background-size: cover;
 }
 
-#icon{
-  width: 30px;
-  cursor: pointer;
-
+#icon {
+  display: none;
 }
 
+#icon1,
+#icon2,
+#icon3 {
+  width: 30px;
+  cursor: pointer;
+}
 
 .title {
   font-size: 23px;
-  padding: 51px;
-  margin-bottom: 2px;
-  padding-bottom: 51px;
+  padding: 36px;
   font-family: IBM Plex Sans;
   font-style: normal;
   line-height: 24px;
   text-align: center;
   color: var(--secondory-color);
   font-weight: bold;
-  margin-top: -7px;
 }
+
 .parentDiv {
   background-image: url(../images/background_img.png);
   background-repeat: no-repeat;
   background-size: 100%;
-
-  scroll-snap-align: center; /* to swipe between pages*/
-  scroll-snap-stop: always; /* to swipe between pages*/
+  scroll-snap-align: center;
+  /* to swipe between pages*/
+  scroll-snap-stop: always;
+  /* to swipe between pages*/
 }
+
 .img {
   margin-left: 0px;
 }
+
 .num {
   width: 105px;
   height: 26px;
@@ -92,10 +100,9 @@ body {
   margin-top: 15px;
 }
 
-.skip-btn {
+.skip-btn1 {
   margin-top: 88px;
   margin-right: 261px;
-
   width: 33px;
   height: 12px;
   left: 44px;
@@ -110,42 +117,276 @@ body {
   color: #000000;
   background: transparent;
   cursor: pointer;
-  color: var(--secondory-color); /* FOR DARK THEME */
+  color: var(--secondory-color);
+  /* FOR DARK THEME */
 }
 
-/**/
+.skip-btn2 {
+  margin-top: 88px;
+  margin-right: 261px;
+  width: 33px;
+  height: 12px;
+  left: 44px;
+  top: 700px;
+  font-family: IBM Plex Sans;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 17px;
+  line-height: 70.5%;
+  text-align: center;
+  border: none;
+  color: #000000;
+  background: transparent;
+  cursor: pointer;
+  color: var(--secondory-color);
+  /* FOR DARK THEME */
+}
+
+.skip-btn3 {
+  margin-top: 88px;
+  margin-right: 261px;
+  width: 33px;
+  height: 12px;
+  left: 44px;
+  top: 700px;
+  font-family: IBM Plex Sans;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 17px;
+  line-height: 70.5%;
+  text-align: center;
+  border: none;
+  color: #000000;
+  background: transparent;
+  cursor: pointer;
+  color: var(--secondory-color);
+  /* FOR DARK THEME */
+}
+
 .center {
   display: flex;
   align-items: center;
   justify-content: center;
   margin-top: -19px;
 }
+
 .flex-colum {
   flex-direction: column;
 }
+
+.continue-btn {
+  display: none;
+}
+
+.covid-images {
+  display: none;
+}
 /* SWIP SECTION*/
+
 .container {
   display: flex;
   align-items: center;
   width: 100%;
-  overflow:auto; scroll-snap-type: x mandatory;
+  overflow: auto;
+  scroll-snap-type: x mandatory;
 }
+
 .page {
-  min-width: 100%; /* needed so Firefox doesn't make img shrink to fit */
-  width: 100%; /* can't take this out either as it breaks Chrome */
+  min-width: 100%;
+  /* needed so Firefox doesn't make img shrink to fit */
+  width: 100%;
+  /* can't take this out either as it breaks Chrome */
 }
-
-
 /*START DARK THEME SECTION */
+
 :root {
---primary-color:#fffAF4;
---secondory-color: #000000 ;
+  --primary-color: #fffaf4;
+  --secondory-color: #000000;
 }
+
 * .dark-theme {
-  --primary-color:#3d5a80;
---secondory-color: #fffAF4 ;
-} 
+  --primary-color: #3d5a80;
+  --secondory-color: #fffaf4;
+}
 /*END DARK THEME SECTION */
 
+@media (min-width: 550px) and (max-width: 1023px) {
+  .footer {
+    display: none;
+  }
+  #icon1,
+  #icon2,
+  #icon3 {
+    display: none;
+  }
+  #icon {
+    display: block;
+    padding-top: 15px;
+    padding-left: 15px;
+    /* z-index: 100; */
+  }
+  .skip-btn1,
+  .skip-btn2,
+  .skip-btn3 {
+    display: none;
+  }
+  .covid-images {
+    display: block;
+  }
+  .continue-btn {
+    display: block;
+    color: #df3030;
+    border: hidden;
+    font-size: 25px;
+    margin: 0 auto;
+    padding-top: 16px;
+    background: none;
+  }
+  .container {
+    scroll-snap-type: none;
+    align-items: self-end;
+    justify-content: space-between;
+    width: 90%;
+    overflow: hidden;
+    margin-left: 43px;
+  }
+  .title {
+    font-size: 17px;
+    padding: 15px;
+  }
+  .img {
+    width: 85%;
+  }
+  .para {
+    font-size: 16px;
+  }
+  .page {
+    width: 15%;
+    min-width: 30%;
+    background-image: none;
+  }
+  .bar {
+    display: none;
+  }
+  .num {
+    font-size: 40px;
+    margin-bottom: 45px;
+    margin-top: 28px;
+  }
+  #bottom-left,
+  #bottom-right,
+  #top-left,
+  #top-right {
+    position: absolute;
+  }
+  #bottom-left {
+    bottom: 0;
+    left: 0;
+  }
+  #bottom-right {
+    bottom: 0;
+    right: 0;
+  }
+  #top-left {
+    top: 0;
+    left: 0;
+  }
+  #top-right {
+    top: 0;
+    right: 0;
+  }
+}
 
+@media (min-width: 1024px) {
+  header {
+    z-index: 100;
+  }
 
+  .swipe-wrap.container {
+    margin: 0 auto;
+  }
+  .footer {
+    display: none;
+  }
+  #icon1,
+  #icon2,
+  #icon3 {
+    display: none;
+  }
+  #icon {
+    display: block;
+    padding-top: 15px;
+    padding-left: 15px;
+  }
+  .skip-btn1,
+  .skip-btn2,
+  .skip-btn3 {
+    display: none;
+  }
+  .covid-images {
+    display: block;
+  }
+  .continue-btn {
+    display: block;
+    color: #df3030;
+    border: hidden;
+    font-size: 25px;
+    margin: 0 auto;
+    padding-top: 16px;
+    background: none;
+    font-weight: 900;
+  }
+  .container {
+    scroll-snap-type: none;
+    align-items: flex-start;
+    justify-content: space-between;
+    width: 70%;
+    overflow: hidden;
+    margin-left: 198px;
+  }
+  .title {
+    font-size: 20px;
+    padding: 15px;
+  }
+  .img {
+    width: 80%;
+  }
+  .para {
+    font-size: 16px;
+  }
+  .page {
+    width: 15%;
+    min-width: 30%;
+    background-image: none;
+  }
+  .bar {
+    display: none;
+  }
+  .num {
+    font-size: 40px;
+    margin-bottom: 45px;
+    margin-top: 28px;
+  }
+  #bottom-left,
+  #bottom-right,
+  #top-left,
+  #top-right {
+    position: absolute;
+  }
+  #bottom-left {
+    bottom: 0;
+    left: 0;
+  }
+  #bottom-right {
+    bottom: 0;
+    right: 0;
+  }
+  #top-left {
+    top: 0;
+    left: 0;
+  }
+  #top-right {
+    top: 0;
+    right: 0;
+  }
+}
