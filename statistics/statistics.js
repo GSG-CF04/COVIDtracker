@@ -1,8 +1,10 @@
 /* Definition of API */
 const api ="https://api.ipgeolocation.io/ipgeo?apiKey=cf2be30a619a447897245a7857d48018"; // API location
 const api2 ="https://api.covid19api.com/countries"; // API countries
+
 /* Definition of DOM TREE */ 
 const countries= document.querySelector("#countries"); //The input of data list
+
 /* Get data from API */
 async function getData(){
 let data, data2;
@@ -20,11 +22,19 @@ let data, data2;
         console.warn("Stupid network Error");
     }
 }
+
+    
+
 /* print data from API to input field and list */
 function printData(data,data2){
 countries.value = data.country_name; //Add current user country in input field relates to IP location
 /* PRINT DATALIST*/
-countries.innerHTML =`<datalist  id="country"><option value="${data.country_name}">${data.country_name}</option>${data2.map( countriess => `<option vlaue="${countriess.ISO2}">${countriess.Country}</option>`)}</datalist>`
+countries.innerHTML =`<datalist  id="country"><option value="${data.country_name}">${data.country_name}</option>${data2.map( countriess => `<option value="${countriess.ISO2}">${countriess.Country}</option>`)}</datalist>`
+countries.addEventListener("change", ()=>{
+    graph.src=(api3+countries.value)
+}
+)
+// console.log( graph.innerHTML)
 }
 getData();// Call getData function
 //! DARK AND LIGHT THEME TOGGLE
