@@ -10,11 +10,8 @@ html {
 }
 
 body {
-  background: var(--primary-color);
-  /* FOR DARK THEME */
+  background: var(--primary-color);/* FOR DARK THEME */
   font-family: IBM Plex Sans;
-  background-repeat: no-repeat;
-  background-size: cover;
 }
 
 #icon {
@@ -335,6 +332,7 @@ body {
     padding-top: 16px;
     background: none;
     font-weight: 900;
+    cursor: pointer;
   }
   .container {
     scroll-snap-type: none;
